@@ -1,4 +1,4 @@
-To run the code first run the data generation scripts: 
+##To run the code first run the data generation scripts: 
 
 1) For the 2D systems
 $ python data_gen_2.py --dynamics_name "double_well" --q_range -2.0 2.0 --p_range -2.0 2.0 --sim_len 20 --time_step 0.01
@@ -23,4 +23,5 @@ You will find the baselines in the Folder Baselines
 
 To reproduce the results in Table 1, you have to go to notebook : NSSNN/plot_NSSNN_baseline.ipynb, rest is self explanatory, just load the model you need
 to see the results for and you're good to go. Same for SHNN go to SHNN/plot_SHNN_baseline.ipynb
+
 
