@@ -10,15 +10,9 @@ This repository contains code for training and evaluating Hamiltonian Neural Net
 Run the following script to generate data for 2D systems (e.g., **Double Well**):
 
 ```bash
-python data_gen_2.py --dynamics_name "double_well"                      --q_range -2.0 2.0                      --p_range -2.0 2.0                      --sim_len 20                      --time_step 0.01
+python data_gen_2.py --dynamics_name "double_well" --q_range -2.0 2.0 --p_range -2.0 2.0 --sim_len 20 --time_step 0.01 --noise_level 0.008
 ```
 
-### 4D System (Henon–Heiles)
-Run:
-
-```bash
-python data_gen_chaotic.py
-```
 
 ⚠️ **Note:** The data range for the Henon–Heiles system is defined within the file.  
 We cannot generate data in arbitrary ranges, since the HH system does not admit closed-form solutions in the entire phase space.  
@@ -32,7 +26,7 @@ We cannot generate data in arbitrary ranges, since the HH system does not admit 
 To train an HNN and save the trained model:
 
 ```bash
-python run_generic_adjoint.py --dynamics_name "double_well"                               --data_folder "double_well_20"                               --gt_res 0.01                               --hid_layers "[16, 32, 16]"                               --solver_res 0.01                               --pred True                               --sim_len 7                               --solver "im"
+python run_generic_adjoint.py --dynamics_name "double_well" --data_folder "double_well_20" --gt_res 0.01 --hid_layers "[16, 32, 16]" --solver_res 0.01 --pred True --sim_len 7 --solver "im"
 ```
 
 - Trained models are saved in the `models/` directory.  
@@ -68,3 +62,4 @@ Baseline implementations are provided in the `Baselines/` folder.
 -  models/     →    Directory where trained models are stored.  
 -  notebooks/  :   `visualize.ipynb` → Plotting notebook for generated data.  
 -  Baselines/  →    Contains baseline implementations.  
+
