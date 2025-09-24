@@ -6,11 +6,11 @@ This repository contains code for training and evaluating Hamiltonian Neural Net
 
 ## 🔧 Data Generation
 
-### 2D Systems
-Run the following script to generate data for 2D systems (e.g., **Double Well**):
+### For all Systems
+Run the following script to generate data for systems (e.g., **Double Well**):
 
 ```bash
-python data_gen_2.py --dynamics_name "double_well" --q_range -2.0 2.0 --p_range -2.0 2.0 --sim_len 20 --time_step 0.01 --noise_level 0.008
+python data_gen.py --dynamics_name "double_well" --q_range -2.0 2.0 --p_range -2.0 2.0 --sim_len 20 --time_step 0.01 --noise_level 0.008
 ```
 
 
@@ -62,4 +62,5 @@ Baseline implementations are provided in the `Baselines/` folder.
 -  models/     →    Directory where trained models are stored.  
 -  notebooks/  :   `visualize.ipynb` → Plotting notebook for generated data.  
 -  Baselines/  →    Contains baseline implementations.  
+
 
